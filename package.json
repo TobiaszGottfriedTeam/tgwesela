@@ -1,0 +1,21 @@
+{
+  "name": "tgwesela",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "sass ./sass/main.scss ./css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobiaszgottfried/tgwesela.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tobiaszgottfried/tgwesela/issues"
+  },
+  "homepage": "https://github.com/tobiaszgottfried/tgwesela#readme",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}
