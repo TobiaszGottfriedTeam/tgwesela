@@ -9,7 +9,7 @@ let videoClick = document.querySelectorAll('.ti-chevron-right')
 let closeBtn = document.querySelector('.close')
 let list = document.querySelectorAll('.list')
 let itemBox = document.querySelectorAll('.itemBox')
-let photos = document.querySelectorAll('.Photo')
+let photos = document.querySelectorAll('.photo')
 
 for (let z = 0; z < itemBox.length; z++) {
 	if (itemBox[z].getAttribute('data-item') == 'photo') {
@@ -47,11 +47,21 @@ for (let g = 0; g < videoClick.length; g++) {
 	})
 }
 
-photos.forEach(photo => {
-	photo.addEventListener('click', function () {
-		modal.classList.add('active')
-	})
-	closeBtn.addEventListener('click', function () {
-		modal.classList.remove('active')
+
+
+
+let btnClose = document.querySelector('.close')
+let img = document.querySelectorAll('.fota')
+var modalImg = document.getElementById('img01')
+var captionText = document.getElementById('caption')
+
+btnClose.onclick = function () {
+	modal.style.display = 'none'
+}
+img.forEach(img => {
+	img.addEventListener('click', function () {
+		modal.style.display = 'block'
+		modalImg.src = this.src
+		captionText.innerHTML = this.alt
 	})
 })
