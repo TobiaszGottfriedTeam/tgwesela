@@ -3,19 +3,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	allNavItems.forEach(item => item.addEventListener('click', () => navbarNavAltMarkup.classList.remove('show')))
 })
-
+//Zmienne potrzebne do modala
 let modal = document.querySelector('.modal')
 let videoClick = document.querySelectorAll('.ti-chevron-right')
-let closeBtn = document.querySelector('.close')
+let btnClose = document.querySelector('.close')
+let img = document.querySelectorAll('.fota')
+//Miejsce do wgrania potrzebnych danych do Modala
+var modalImg = document.getElementById('img01')
+var captionText = document.getElementById('caption')
+//Parametry do sortowania
 let list = document.querySelectorAll('.list')
 let itemBox = document.querySelectorAll('.itemBox')
 let photos = document.querySelectorAll('.photo')
 
-for (let z = 0; z < itemBox.length; z++) {
-	if (itemBox[z].getAttribute('data-item') == 'photo') {
-		itemBox[z].classList.add('hide')
+//Sortowanie Zdjęć oraz Video
+itemBox.forEach(item => {
+	if(item.getAttribute('data-item') == 'photo'){
+		item.classList.add('hide')
 	}
-}
+})
+
 for (let i = 0; i < list.length; i++) {
 	list[i].addEventListener('click', function () {
 		for (let j = 0; j < list.length; j++) {
@@ -37,27 +44,10 @@ for (let i = 0; i < list.length; i++) {
 		}
 	})
 }
-//MODAL Video
-for (let g = 0; g < videoClick.length; g++) {
-	videoClick[g].addEventListener('click',function(){
-		modal.classList.add('active')
-	})
-	closeBtn.addEventListener('click', function () {
-		modal.classList.remove('active')
-	})
-}
 
 
 
-
-let btnClose = document.querySelector('.close')
-let img = document.querySelectorAll('.fota')
-var modalImg = document.getElementById('img01')
-var captionText = document.getElementById('caption')
-
-btnClose.onclick = function () {
-	modal.style.display = 'none'
-}
+// Wywołanie modala dla zdjęć
 img.forEach(img => {
 	img.addEventListener('click', function () {
 		modal.style.display = 'block'
@@ -65,3 +55,13 @@ img.forEach(img => {
 		captionText.innerHTML = this.alt
 	})
 })
+// Wywołanie modala dla video
+videoClick.forEach(video =>{
+	video.addEventListener('click', function(){
+		modal.style.display = 'block'
+	})
+})
+// Zamknięcie modala
+btnClose.onclick = function () {
+	modal.style.display = 'none'
+}
