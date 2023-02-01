@@ -17,23 +17,22 @@ body {
 
 ::-webkit-scrollbar {
 	width: 15px;
-	}
-	::-webkit-scrollbar-track {
-		border-left: 1px solid rgb(141, 140, 140);
-		}
-	::-webkit-scrollbar-thumb {
+}
+::-webkit-scrollbar-track {
+	border-left: 1px solid rgb(141, 140, 140);
+}
+::-webkit-scrollbar-thumb {
 	background: $blue-color;
-		-webkit-box-shadow: inset 0 0 6px #e61f47;
-	}
-	::-webkit-scrollbar-thumb:hover {
+	-webkit-box-shadow: inset 0 0 6px #e61f47;
+}
+::-webkit-scrollbar-thumb:hover {
 	background: #e61f47;
-		-webkit-box-shadow: inset 0 0 6px #d4042e;
-	}
-	
+	-webkit-box-shadow: inset 0 0 6px #d4042e;
+}
 
 /*Zmienne globalne*/
 .btn-special {
-	background-color: $blue-color ;
+	background-color: $blue-color;
 	color: $white;
 }
 .btn-special:hover {
@@ -144,18 +143,6 @@ header {
 	color: $white;
 }
 
-
-
-myImg {
-	border-radius: 5px;
-	cursor: pointer;
-	transition: 0.3s;
-}
-
-#myImg:hover {
-	opacity: 0.7;
-}
-
 .modal {
 	display: none;
 	position: fixed;
@@ -164,7 +151,7 @@ myImg {
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	overflow: hidden;
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.9);
@@ -172,14 +159,14 @@ myImg {
 	padding-top: 50px;
 }
 
-
 .modal-content {
 	margin: auto;
-	
+
 	border: none;
 	display: block;
 	width: 80%;
 	max-width: 700px;
+	
 }
 
 #caption {
@@ -192,7 +179,6 @@ myImg {
 	padding: 10px 0;
 	height: 150px;
 }
-
 
 .modal-content,
 #caption {
@@ -209,7 +195,6 @@ myImg {
 	}
 }
 
-
 .close {
 	position: absolute;
 	top: 15px;
@@ -222,7 +207,7 @@ myImg {
 
 .close:hover,
 .close:focus {
-	color: #bbb;
+	color: $blue-color;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -232,9 +217,6 @@ myImg {
 		width: 100%;
 	}
 }
-
-
-
 
 .aboutus {
 	.team-wrap {
@@ -430,7 +412,6 @@ myImg {
 
 	.price-info {
 		margin-top: 30px;
-		
 
 		a {
 			text-decoration: none;
@@ -558,8 +539,6 @@ myImg {
 }
 
 @media (min-width: 786px) {
-	
-
 	header {
 		h1 {
 			font-size: 36px;
