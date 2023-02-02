@@ -50,7 +50,7 @@ for (let i = 0; i < list.length; i++) {
 // Wywołanie modala dla zdjęć
 img.forEach(img => {
 	img.addEventListener('click', function () {
-		modal.style.display = 'block'
+		modal.style.display = 'flex'
 		modalImg.src = this.src
 		captionText.innerHTML = this.alt
 	})
@@ -58,7 +58,7 @@ img.forEach(img => {
 // Wywołanie modala dla video
 videoClick.forEach(video =>{
 	video.addEventListener('click', function(){
-		modal.style.display = 'block'
+		modal.style.display = 'flex'
 	})
 })
 // Zamknięcie modala
