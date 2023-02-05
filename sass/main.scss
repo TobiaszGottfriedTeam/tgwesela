@@ -149,13 +149,14 @@ header {
 	z-index: 1000;
 	left: 0;
 	top: 0;
-	bottom: 0;right: 0;
+	bottom: 0;
+	right: 0;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.9);
-	
+
 	align-items: center;
 	justify-content: center;
 	.close {
@@ -177,23 +178,18 @@ header {
 	.modal-wrap {
 		display: flex;
 		flex-direction: column;
-		align-content: center;
 		justify-content: center;
-
-		flex-wrap: wrap;
+		align-items: center;
 
 		.modal-content {
 			display: flex;
 			object-fit: contain;
 			border: none;
 			max-width: 80%;
-			max-height: 80vh; 
+			max-height: 80vh;
 		}
 
-		
-
-		.modal-content
-		{
+		.modal-content {
 			animation-name: zoom;
 			animation-duration: 0.6s;
 		}
@@ -331,6 +327,7 @@ header {
 
 					.kto {
 						font-weight: bold;
+						border-right: 1px solid $black;
 					}
 					i {
 						position: absolute;
@@ -422,7 +419,7 @@ header {
 			border-radius: 5px;
 			padding: 25px;
 			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
-			transition: transform .3s;
+			transition: transform 0.3s;
 			a {
 				text-decoration: none;
 				color: black;
@@ -518,16 +515,15 @@ header {
 		align-items: center;
 		justify-content: center;
 		padding: 40px;
-		a{
+		a {
 			text-decoration: none;
 			color: $black;
-			p{
+			p {
 				font-size: 36px;
 				padding: 20px;
 				margin-bottom: 0;
 			}
 		}
-		
 	}
 }
 
@@ -594,5 +590,4 @@ header {
 		padding: 0;
 		flex-direction: row-reverse;
 	}
-	
 }
