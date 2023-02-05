@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 let modal = document.querySelector('.modal')
 let videoClick = document.querySelectorAll('.ti-chevron-right')
 let btnClose = document.querySelector('.close')
-let img = document.querySelectorAll('.fota')
+let foty = document.querySelectorAll('.fota')
 //Miejsce do wgrania potrzebnych danych do Modala
 var modalImg = document.getElementById('img01')
 var captionText = document.getElementById('caption')
@@ -46,22 +46,23 @@ for (let i = 0; i < list.length; i++) {
 }
 
 
-
-// Wywołanie modala dla zdjęć
-img.forEach(img => {
-	img.addEventListener('click', function () {
+const modalConfig = {
+	openImageModal: () => {
 		modal.style.display = 'flex'
 		modalImg.src = this.src
 		captionText.innerHTML = this.alt
-	})
-})
-// Wywołanie modala dla video
-videoClick.forEach(video =>{
-	video.addEventListener('click', function(){
-		modal.style.display = 'flex'
-	})
-})
-// Zamknięcie modala
-btnClose.onclick = function () {
-	modal.style.display = 'none'
+	},
+	closeModal: () => {
+		modal.style.display = 'none'
+	},
+	nextImage: () => {},
+
+	setup: () => {
+		foty.forEach(fota => {
+			fota.addEventListener('click', modalConfig.openImageModal())
+		})
+		btnClose.onclick = modalConfig.closeModal();
+	}
 }
+
+modalConfig.setup();
