@@ -47,22 +47,22 @@ for (let i = 0; i < list.length; i++) {
 
 
 const modalConfig = {
-	openImageModal: () => {
+	openImageModal: ({src, alt}) => {
 		modal.style.display = 'flex'
-		modalImg.src = this.src
-		captionText.innerHTML = this.alt
+		modalImg.src = src
+		captionText.innerHTML = alt
 	},
 	closeModal: () => {
 		modal.style.display = 'none'
 	},
 	nextImage: () => {},
-
-	setup: () => {
-		foty.forEach(fota => {
-			fota.addEventListener('click', modalConfig.openImageModal())
-		})
-		btnClose.onclick = modalConfig.closeModal();
-	}
 }
 
-modalConfig.setup();
+const modalSetup = () => {
+	foty.forEach(fota => {
+		fota.addEventListener('click', () => modalConfig.openImageModal(fota))
+	})
+	btnClose.onclick = modalConfig.closeModal;
+}
+
+modalSetup()
