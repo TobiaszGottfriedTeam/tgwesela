@@ -422,6 +422,7 @@ header {
 			border-radius: 5px;
 			padding: 25px;
 			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+			transition: transform .3s;
 			a {
 				text-decoration: none;
 				color: black;
@@ -440,7 +441,9 @@ header {
 				}
 			}
 		}
-
+		.opinionItem:hover {
+			transform: scale(1.05);
+		}
 		.opiniaN {
 			font-weight: bold;
 			font-size: 1.2rem;
