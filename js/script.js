@@ -18,7 +18,7 @@ let photos = document.querySelectorAll('.photo')
 
 //Sortowanie Zdjęć oraz Video
 itemBox.forEach(item => {
-	if(item.getAttribute('data-item') == 'photo'){
+	if (item.getAttribute('data-item') == 'photo') {
 		item.classList.add('hide')
 	}
 })
@@ -45,12 +45,11 @@ for (let i = 0; i < list.length; i++) {
 	})
 }
 
-
 const modalConfig = {
-	openImageModal: ({src, alt}) => {
+	openImageModal: ({ src, alt }) => {
 		modal.style.display = 'flex'
 		modalImg.src = src
-		captionText.innerHTML = alt
+		modalImg.alt = alt
 	},
 	closeModal: () => {
 		modal.style.display = 'none'
@@ -62,7 +61,7 @@ const modalSetup = () => {
 	foty.forEach(fota => {
 		fota.addEventListener('click', () => modalConfig.openImageModal(fota))
 	})
-	btnClose.onclick = modalConfig.closeModal;
+	btnClose.onclick = modalConfig.closeModal
 }
 
 modalSetup()

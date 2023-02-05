@@ -254,6 +254,7 @@ header {
 	.opis-firmy {
 		p {
 			margin-bottom: 0px;
+			text-align: justify;
 		}
 		.ekipawspolne {
 			position: relative;
@@ -344,7 +345,7 @@ header {
 						bottom: 5px;
 						right: 5px;
 						font-size: 20px;
-						font-weight: bold;
+						
 						padding: 10px;
 						text-decoration: none;
 						color: $black;
