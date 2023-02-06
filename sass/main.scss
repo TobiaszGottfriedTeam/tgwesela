@@ -296,7 +296,7 @@ header {
 			justify-content: center;
 			align-items: center;
 			flex-wrap: wrap;
-			
+
 			.itemBox {
 				position: relative;
 				width: 300px;
@@ -416,6 +416,7 @@ header {
 
 .opinie {
 	.cardsOpinion {
+		padding: 10px;
 		.opinionItem {
 			position: relative;
 			margin: 30px;
@@ -519,11 +520,15 @@ header {
 		justify-content: center;
 		padding: 40px;
 		a {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
 			text-decoration: none;
 			color: $black;
 			p {
+				width: 300px;
 				font-size: 24px;
-				padding: 20px;
+				padding: 10px;
 				margin-bottom: 0;
 			}
 		}
@@ -574,7 +579,17 @@ header {
 		font-size: 18px;
 	}
 	.itemBox.Vid {
-		width: 400px;
+		width: 400px !important;
+	}
+	.kontakt {
+		.dane {
+			a {
+				p {
+					width: 600px;
+					font-size: 36px;
+				}
+			}
+		}
 	}
 }
 @media (min-width: 1200px) {
