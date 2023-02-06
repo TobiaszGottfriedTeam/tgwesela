@@ -185,10 +185,11 @@ header {
 		align-items: center;
 		object-fit: contain;
 		border: none;
-		width: 1400px;
+		width: auto;
 		max-width: 90%;
 		max-height: 80vh;
 	}
+	
 	.modal-content {
 		animation-name: zoom;
 		animation-duration: 0.6s;
