@@ -296,9 +296,7 @@ header {
 			justify-content: center;
 			align-items: center;
 			flex-wrap: wrap;
-			.itemBox.Vid {
-				width: 400px;
-			}
+			
 			.itemBox {
 				position: relative;
 				width: 300px;
@@ -524,7 +522,7 @@ header {
 			text-decoration: none;
 			color: $black;
 			p {
-				font-size: 36px;
+				font-size: 24px;
 				padding: 20px;
 				margin-bottom: 0;
 			}
@@ -574,6 +572,9 @@ header {
 @media (min-width: 992px) {
 	.price-info {
 		font-size: 18px;
+	}
+	.itemBox.Vid {
+		width: 400px;
 	}
 }
 @media (min-width: 1200px) {
