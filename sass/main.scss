@@ -118,7 +118,7 @@ header {
 			flex-direction: column;
 			padding: 25px;
 			z-index: 2;
-			p{
+			p {
 				margin-bottom: 0;
 			}
 		}
@@ -130,7 +130,6 @@ header {
 		background-color: rgba(0, 0, 0, 0.8);
 		z-index: -1;
 	}
-	
 }
 
 .btn-outline-light {
@@ -189,12 +188,11 @@ header {
 		max-width: 90%;
 		max-height: 80vh;
 	}
-	
+
 	.modal-content {
 		animation-name: zoom;
 		animation-duration: 0.6s;
 	}
-	
 }
 
 @keyframes zoom {
@@ -298,6 +296,9 @@ header {
 			justify-content: center;
 			align-items: center;
 			flex-wrap: wrap;
+			.itemBox.Vid {
+				width: 400px;
+			}
 			.itemBox {
 				position: relative;
 				width: 300px;
@@ -317,10 +318,11 @@ header {
 					position: absolute;
 
 					background-color: $filtr-biały;
-					left: 25px;
-					top: 25px;
-					width: 250px;
-					height: 250px;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 80%;
+					height: 80%;
 					justify-content: center;
 					text-align: center;
 					align-items: center;
