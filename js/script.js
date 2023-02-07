@@ -4,17 +4,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	allNavItems.forEach(item => item.addEventListener('click', () => navbarNavAltMarkup.classList.remove('show')))
 })
 //Zmienne potrzebne do modala
-let modal = document.querySelector('.modal')
-let videoClick = document.querySelectorAll('.ti-chevron-right')
-let btnClose = document.querySelector('.close')
-let foty = document.querySelectorAll('.fota')
+const modal = document.querySelector('.modal')
+const videoClick = document.querySelectorAll('.ti-chevron-right')
+const btnClose = document.querySelector('.close')
+const foty = document.querySelectorAll('.fota')
 //Miejsce do wgrania potrzebnych danych do Modala
-var modalImg = document.getElementById('img01')
-var captionText = document.getElementById('caption')
+const modalImg = document.getElementById('img01')
+const captionText = document.getElementById('caption')
 //Parametry do sortowania
-let list = document.querySelectorAll('.list')
-let itemBox = document.querySelectorAll('.itemBox')
-let photos = document.querySelectorAll('.photo')
+const list = document.querySelectorAll('.list')
+const itemBox = document.querySelectorAll('.itemBox')
+const photos = document.querySelectorAll('.photo')
 
 //Sortowanie Zdjęć oraz Video
 itemBox.forEach(item => {
