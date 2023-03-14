@@ -8,6 +8,8 @@ const modal = document.querySelector('.modal')
 const videoClick = document.querySelectorAll('.ti-chevron-right')
 const btnClose = document.querySelector('.close')
 const foty = document.querySelectorAll('.fota')
+const arrowLeft = document.querySelector('.leftArrow')
+const arrowRight = document.querySelector('.rightArrow')
 //Miejsce do wgrania potrzebnych danych do Modala
 const modalImg = document.getElementById('img01')
 const captionText = document.getElementById('caption')
@@ -45,23 +47,48 @@ for (let i = 0; i < list.length; i++) {
 	})
 }
 
+let currentImageIndex = 0;
+
 const modalConfig = {
-	openImageModal: ({ src, alt }) => {
-		modal.style.display = 'flex'
-		modalImg.src = src
-		modalImg.alt = alt
-	},
-	closeModal: () => {
-		modal.style.display = 'none'
-	},
-	nextImage: () => {},
+  openImageModal: ({ src, alt }, index) => {
+    modal.style.display = 'flex'
+    modalImg.src = src
+    modalImg.alt = alt
+
+    currentImageIndex = index
+  },
+  closeModal: () => {
+    modal.style.display = 'none'
+  },
+  nextImage: () => {
+    currentImageIndex++
+
+    if (currentImageIndex >= foty.length) currentImageIndex = 0
+
+    const { src, alt } = foty[currentImageIndex]
+    modalImg.src = src
+    modalImg.alt = alt
+  },
+  prevImage: () => {
+    currentImageIndex--
+
+    if (currentImageIndex < 0) currentImageIndex = foty.length - 1
+
+    const { src, alt } = foty[currentImageIndex]
+    modalImg.src = src
+    modalImg.alt = alt
+  },
 }
 
 const modalSetup = () => {
-	foty.forEach(fota => {
-		fota.addEventListener('click', () => modalConfig.openImageModal(fota))
-	})
-	btnClose.onclick = modalConfig.closeModal
+  for (let i = 0; i < foty.length; i++) {
+    foty[i].addEventListener('click', () => modalConfig.openImageModal(foty[i], i))
+  }
+
+  arrowRight.addEventListener('click', () => modalConfig.nextImage())
+  arrowLeft.addEventListener('click', () => modalConfig.prevImage())
+
+  btnClose.onclick = modalConfig.closeModal
 }
 
 modalSetup()

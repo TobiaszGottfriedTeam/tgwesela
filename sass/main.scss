@@ -162,6 +162,26 @@ header {
 	align-content: center;
 	align-items: center;
 	justify-content: center;
+
+	.modal-stuff {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		animation-name: zoom;
+		animation-duration: 0.6s;
+		.arrow {
+			cursor: pointer;
+			font-size: 56px;
+			color: #f1f1f1;
+		}
+		.modal-content {
+			object-fit: contain;
+			border: none;
+			width: auto;
+			max-width: 90%;
+			max-height: 80vh;
+		}
+	}
 	.close {
 		position: absolute;
 		top: 15px;
@@ -177,21 +197,6 @@ header {
 		color: $blue-color;
 		text-decoration: none;
 		cursor: pointer;
-	}
-	.modal-content {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		object-fit: contain;
-		border: none;
-		width: auto;
-		max-width: 90%;
-		max-height: 80vh;
-	}
-
-	.modal-content {
-		animation-name: zoom;
-		animation-duration: 0.6s;
 	}
 }
 
